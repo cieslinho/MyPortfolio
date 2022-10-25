@@ -1,0 +1,112 @@
+@mixin navBtn {
+	padding: 1em 0.5em;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	&:focus {
+		outline: none;
+	}
+
+	&-box {
+		position: relative;
+		width: 40px;
+		height: 20px;
+	}
+	&-bars {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 2px;
+		background-color: #dff6ff;
+		transition: var(--nav-btn-transition);
+	}
+	&-bars::after,
+	&-bars::before {
+		content: '';
+		width: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 2px;
+		background-color: #dff6ff;
+		transition: var(--nav-btn-transition);
+	}
+	&-bars {
+		width: 85%;
+	}
+	&-bars::after {
+		width: 45%;
+		top: 9px;
+	}
+	&-bars::before {
+		width: 75%;
+		top: 18px;
+	}
+}
+
+@mixin navMobileItem {
+	&-item {
+		display: block;
+		position: relative;
+		padding: 1em 2em;
+		margin: 1em 0;
+		text-align: center;
+		font-size: 2rem;
+		width: 100%;
+		color: var(--text-lightcolor);
+		text-decoration: none;
+		transition: var(--nav-item-transition);
+		&:hover {
+			margin-left: 1em;
+			color: var(--second-bgcolor);
+			&::before {
+				background-color: var(--second-bgcolor);
+			}
+		}
+		&::before {
+			position: absolute;
+			content: '';
+			width: 2px;
+			height: 100%;
+			top: 0;
+			left: 20px;
+			transition: background-color 0.3s;
+			background-color: var(--text-lightcolor);
+		}
+	}
+}
+
+@mixin navSocials {
+	&-item {
+		padding: 0.5em;
+		margin: 0.5em;
+		&:hover {
+			svg {
+				box-shadow: 0 0 5px black;
+				border-radius: 50%;
+			}
+		}
+	}
+	svg {
+		transition: box-shadow 0.3s;
+		border-radius: 50%;
+	}
+}
+
+@mixin navCv {
+	&-cv {
+		margin: 2em 0;
+		padding: 1em 4em;
+		text-decoration: none;
+		border: 1px solid var(--second-bgcolor);
+		color: var(--second-bgcolor);
+		background-color: var(--main-bgcolor);
+		text-align: center;
+		transition: var(--nav-cv-transition);
+		border-radius: 5px;
+		&:hover {
+			border: 1px solid var(--text-lightcolor);
+			color: var(--text-lightcolor);
+		}
+	}
+}

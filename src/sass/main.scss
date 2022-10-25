@@ -1,9 +1,23 @@
+@import '__animations.scss';
+@import '__colors.scss';
+@import '__components.scss';
+@import '__mixins.scss';
+
 *,
 *::before,
 *::after {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+:root {
+	--nav-bgcolor: #06283d;
+	--main-bgcolor: #041c32;
+	--second-bgcolor: #47b5ff;
+	--text-lightcolor: #dff6ff;
+	--nav-btn-transition: width 0.2s ease-out, background-color 0.2s;
+	--nav-cv-transition: border 0.2s, color 0.2s;
+	--nav-item-transition: color 0.2s, margin-left 0.3s;
 }
 
 html {
@@ -13,4 +27,57 @@ html {
 
 body {
 	font-size: 1.6rem;
+	font-family: 'Roboto Condensed', sans-serif;
+	background-color: var(--main-bgcolor);
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: var(--nav-bgcolor);
+	&__navbar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__logo {
+		padding: 1em;
+		display: block;
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+		font-size: 2rem;
+		color: var(--text-lightcolor);
+		transition: var(--nav-item-transition);
+		&:hover {
+			color: var(--second-bgcolor);
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+	&__mobile {
+		position: absolute;
+		display: flex;
+		height: 100vh;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		right: 0;
+		width: min(75vw, 400px);
+		transform: translateX(100vw);
+		background-color: var(--nav-bgcolor);
+		box-shadow: -10px 0px 30px -15px var(--nav-bgcolor);
+		transition: transform 0.3s ease-in-out;
+		@include navMobileItem;
+		@include navCv;
+	}
+	&__socials {
+		display: flex;
+		align-items: center;
+		@include navSocials;
+	}
+	&__btn {
+		@include navBtn;
+	}
 }

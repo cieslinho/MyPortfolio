@@ -1,0 +1,14 @@
+.active-btn {
+	.nav__btn-bars,
+	.nav__btn-bars::after,
+	.nav__btn-bars::before {
+		width: 100%;
+		background-color: var(--second-bgcolor);
+	}
+}
+
+.nav {
+	.active-menu {
+		transform: translateX(0vw);
+	}
+}
