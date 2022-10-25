@@ -3,6 +3,7 @@
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
+	z-index: 99999999;
 	&:focus {
 		outline: none;
 	}
@@ -41,6 +42,11 @@
 	&-bars::before {
 		width: 75%;
 		top: 18px;
+	}
+	&:hover &-bars,
+	&:hover &-bars::after,
+	&:hover &-bars::before {
+		background-color: var(--second-bgcolor);
 	}
 }
 
@@ -88,6 +94,9 @@
 		}
 	}
 	svg {
+		padding: 0.25em;
+		width: 40px;
+		height: 40px;
 		transition: box-shadow 0.3s;
 		border-radius: 50%;
 	}
@@ -95,7 +104,7 @@
 
 @mixin navCv {
 	&-cv {
-		margin: 2em 0;
+		margin: 4em 0;
 		padding: 1em 4em;
 		text-decoration: none;
 		border: 1px solid var(--second-bgcolor);
