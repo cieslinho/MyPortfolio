@@ -84,8 +84,8 @@
 
 @mixin navSocials {
 	&-item {
-		padding: 0.5em;
-		margin: 0.5em;
+		// padding: 0.5em;
+		margin: 0.25em;
 		&:hover {
 			svg {
 				box-shadow: 0 0 5px black;
@@ -95,8 +95,6 @@
 	}
 	svg {
 		padding: 0.25em;
-		width: 40px;
-		height: 40px;
 		transition: box-shadow 0.3s;
 		border-radius: 50%;
 	}
@@ -107,15 +105,16 @@
 		margin: 4em 0;
 		padding: 1em 4em;
 		text-decoration: none;
-		border: 1px solid var(--second-bgcolor);
-		color: var(--second-bgcolor);
-		background-color: var(--main-bgcolor);
+		border: 1px solid transparent;
+		color: var(--text-lightcolor);
+		background-color: var(--cta-btn);
 		text-align: center;
 		transition: var(--nav-cv-transition);
 		border-radius: 5px;
 		&:hover {
-			border: 1px solid var(--text-lightcolor);
-			color: var(--text-lightcolor);
+			border: 1px solid var(--cta-btn);
+			background-color: var(--main-bgcolor);
+			color: var(--second-bgcolor);
 		}
 	}
 }
