@@ -2,8 +2,8 @@
 	padding: 1em 0.5em;
 	background-color: transparent;
 	border: none;
+	z-index: 100000;
 	cursor: pointer;
-	z-index: 99999999;
 	&:focus {
 		outline: none;
 	}
@@ -54,10 +54,10 @@
 	&-item {
 		display: block;
 		position: relative;
-		padding: 1em 2em;
+		padding: 0.8em 1.4em;
 		margin: 1em 0;
 		text-align: center;
-		font-size: 2rem;
+		font-size: 1.8rem;
 		width: 100%;
 		color: var(--text-lightcolor);
 		text-decoration: none;
@@ -66,44 +66,63 @@
 			margin-left: 1em;
 			color: var(--second-bgcolor);
 			&::before {
-				background-color: var(--second-bgcolor);
+				opacity: 1;
 			}
 		}
 		&::before {
+			opacity: 0;
 			position: absolute;
 			content: '';
 			width: 2px;
 			height: 100%;
 			top: 0;
-			left: 20px;
-			transition: background-color 0.3s;
-			background-color: var(--text-lightcolor);
+			left: 50px;
+			transition: opacity 0.1s ease-in-out;
+			background-color: var(--second-bgcolor);
 		}
 	}
 }
 
 @mixin navSocials {
 	&-item {
-		// padding: 0.5em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--cta-btn);
+		border: 1px solid transparent;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
 		margin: 0.25em;
+		transition: background-color 0.3s, border 0.3s;
 		&:hover {
+			background-color: var(--main-bgcolor);
+			border: 1px solid var(--cta-btn);
 			svg {
-				box-shadow: 0 0 5px black;
-				border-radius: 50%;
+				fill: var(--cta-btn);
+			}
+		}
+		&:hover:nth-child(2) {
+			svg {
+				stroke: var(--main-bgcolor);
+			}
+		}
+		&:hover:nth-child(3) {
+			svg {
+				stroke: var(--main-bgcolor);
 			}
 		}
 	}
 	svg {
-		padding: 0.25em;
-		transition: box-shadow 0.3s;
-		border-radius: 50%;
+		transition: fill 0.3s, stroke 0.3s;
+		width: 40px;
 	}
 }
 
 @mixin navCv {
 	&-cv {
-		margin: 4em 0;
-		padding: 1em 4em;
+		margin: 1em 0 1.5em;
+		padding: 0.8em 3.5em;
 		text-decoration: none;
 		border: 1px solid transparent;
 		color: var(--text-lightcolor);
