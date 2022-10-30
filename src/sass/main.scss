@@ -300,7 +300,6 @@ body {
 		border-radius: 10px;
 	}
 }
-// timeline
 
 // projects
 .projects {
@@ -397,19 +396,22 @@ body {
 	}
 	&__btn {
 		&:first-child {
-			margin-right: 0.8em;
+			margin: 0.8em 0.8em 0.8em 0;
 		}
-		display: inlin;
-		padding: 0.3em 0.8em;
-		border-radius: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.3em;
 		border: 1px solid transparent;
-		background-color: var(--main-bgcolor);
 		text-decoration: none;
 		transition: var(--nav-cv-transition);
 		color: var(--text-lightcolor);
-		&:hover {
-			background-color: var(--text-maincolor);
-			color: var(--nav-bgcolor);
+		&:hover svg {
+			fill: var(--main-bgcolor);
+			stroke: var(--main-bgcolor);
+		}
+		svg {
+			transition: fill 0.3s, stroke 0.3s;
 		}
 	}
 }
@@ -479,6 +481,29 @@ body {
 				background-color: var(--text-lightcolor);
 			}
 		}
+	}
+}
+// freelance
+.freelance {
+	.section-title {
+		&::after {
+			order: -1;
+			margin-left: 0;
+			margin-right: 0.5em;
+		}
+	}
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+	}
+	&__text {
+		margin-bottom: 0.5em;
+		line-height: 150%;
+		color: var(--text-maincolor);
+		font-size: 1.8rem;
+	}
+	&__span {
+		color: var(--cta-btn);
 	}
 }
 
