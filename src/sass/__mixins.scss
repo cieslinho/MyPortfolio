@@ -62,6 +62,9 @@
 		color: var(--text-lightcolor);
 		text-decoration: none;
 		transition: var(--nav-item-transition);
+		&:focus {
+			outline: none;
+		}
 		&:hover {
 			margin-left: 1em;
 			color: var(--second-bgcolor);
@@ -95,6 +98,9 @@
 		height: 50px;
 		margin: 0.25em;
 		transition: background-color 0.3s, border 0.3s;
+		&:focus {
+			outline: none;
+		}
 		&:hover {
 			background-color: var(--main-bgcolor);
 			border: 1px solid var(--cta-btn);
@@ -130,6 +136,9 @@
 		text-align: center;
 		transition: var(--nav-cv-transition);
 		border-radius: 5px;
+		&:focus {
+			outline: none;
+		}
 		&:hover {
 			border: 1px solid var(--cta-btn);
 			background-color: var(--main-bgcolor);

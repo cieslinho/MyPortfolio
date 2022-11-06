@@ -125,6 +125,9 @@ body {
 			text-decoration: none;
 			transition: color 0.2s;
 			color: var(--text-lightcolor);
+			&:focus {
+				outline: none;
+			}
 			&:hover {
 				color: var(--second-bgcolor);
 			}
@@ -154,6 +157,9 @@ body {
 			text-transform: uppercase;
 			transition: var(--nav-cv-transition);
 			text-decoration: none;
+			&:focus {
+				outline: none;
+			}
 			&:hover {
 				border: 1px solid var(--cta-btn);
 				background-color: var(--main-bgcolor);
@@ -410,6 +416,9 @@ body {
 		text-decoration: none;
 		transition: var(--nav-cv-transition);
 		color: var(--text-lightcolor);
+		&:focus {
+			outline: none;
+		}
 		&:hover svg {
 			fill: var(--main-bgcolor);
 			stroke: var(--main-bgcolor);
@@ -523,8 +532,6 @@ body {
 }
 // contact
 .contact {
-	&__box {
-	}
 	&__form {
 		display: flex;
 		flex-direction: column;
@@ -536,6 +543,9 @@ body {
 		&:nth-child(2) {
 			margin-bottom: 2em;
 		}
+	}
+	&__bottom {
+		margin-bottom: 1.5em;
 	}
 
 	&__field {
@@ -549,12 +559,12 @@ body {
 	}
 	&__input,
 	&__textarea {
-		padding: 1em;
+		padding: 0.8em 0.5em 1em;
 		width: 100%;
-		height: 100%;
 		border: none;
 		border-bottom: 1px solid var(--cta-btn);
 		background-color: transparent;
+		font-size: 1.5rem;
 		font-family: 'Roboto Condensed', sans-serif;
 		transition: border-bottom 0.3s;
 		color: var(--text-maincolor);
@@ -564,25 +574,25 @@ body {
 			border-bottom: 1px solid var(--second-bgcolor);
 		}
 		&:focus + .contact__label {
-			transform: translateY(-25px);
+			color: var(--second-bgcolor);
+			transform: translateY(-20px);
 			font-size: 1.4rem;
 		}
 	}
 	&__label {
 		position: absolute;
 		left: 5px;
-		top: 0;
+		top: 10px;
 		color: var(--text-maincolor);
-		z-index: -5;
-		transition: transform 0.3s, font-size 0.3s;
-		&-textarea {
-		}
+		// z-index: -5;
+		transition: transform 0.3s, font-size 0.3s, color 0.3s;
 	}
 	&__textarea {
+		padding-top: 1.5em;
 		min-width: 100%;
 		max-width: 100%;
-		height: 50px;
-		transition: height 0.3s;
+		height: 59px;
+		transition: height 0.3s, border-bottom 0.3s;
 		&:focus {
 			height: 100px;
 		}
@@ -594,13 +604,20 @@ body {
 		border-radius: 5px;
 		font-size: 1.7rem;
 		font-family: 'Roboto Condensed', sans-serif;
+		text-transform: uppercase;
 		color: var(--text-lightcolor);
 		font-weight: 700;
 		border: none;
+		border: 1px solid transparent;
 		background-color: var(--cta-btn);
-		transition: var(--nav-btn-transition);
+		transition: var(--nav-cv-transition);
 		&:hover {
-			background-color: var(--second-bgcolor);
+			background-color: var(--nav-bgcolor);
+			color: var(--second-bgcolor);
+			border: 1px solid var(--cta-btn);
+		}
+		&:focus {
+			outline: none;
 		}
 	}
 }
@@ -836,6 +853,23 @@ body {
 			font-size: 1.8rem;
 		}
 	}
+	.contact {
+		&__label {
+			top: 25px;
+			font-size: 1.8rem;
+		}
+		&__input,
+		&__textarea {
+			font-size: 1.8rem;
+			&:focus + .contact__label {
+				transform: translateY(-30px);
+				font-size: 1.5rem;
+			}
+		}
+		&__btn {
+			width: 250px;
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -879,6 +913,23 @@ body {
 	.freelance {
 		&__text {
 			font-size: 2.2rem;
+		}
+	}
+	.contact {
+		&__label {
+			top: 25px;
+			font-size: 2rem;
+		}
+		&__input,
+		&__textarea {
+			font-size: 1.8rem;
+			&:focus + .contact__label {
+				transform: translateY(-35px);
+				font-size: 1.8rem;
+			}
+		}
+		&__btn {
+			width: 250px;
 		}
 	}
 }
