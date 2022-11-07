@@ -236,7 +236,7 @@
                                 Iure quo soluta sit inventore, sunt nam facilis voluptates doloribus ab distinctio, quae
                                 voluptas culpa? Ducimus minima dignissimos reprehenderit quod est quia dolor esse
                                 obcaecati omnis, odit facere delectus amet neque accusamus ipsam! Ipsa corporis minima,
-                                nesciunt laudantium beatae sed impedit? Velit.</p>
+                                nesciunt laudantium beatae sed impedit? Velit. [MMCSchool]</p>
                             <div class="projects__bottom">
                                 <ul class="projects__tags">
                                     <li class="projects__tag">HTML</li>
@@ -282,7 +282,7 @@
                                 Iure quo soluta sit inventore, sunt nam facilis voluptates doloribus ab distinctio, quae
                                 voluptas culpa? Ducimus minima dignissimos reprehenderit quod est quia dolor esse
                                 obcaecati omnis, odit facere delectus amet neque accusamus ipsam! Ipsa corporis minima,
-                                nesciunt laudantium beatae sed impedit? Velit.</p>
+                                nesciunt laudantium beatae sed impedit? Velit. [MMCSchool]</p>
                             <div class="projects__bottom">
                                 <ul class="projects__tags">
                                     <li class="projects__tag">HTML</li>
@@ -328,7 +328,7 @@
                                 Iure quo soluta sit inventore, sunt nam facilis voluptates doloribus ab distinctio, quae
                                 voluptas culpa? Ducimus minima dignissimos reprehenderit quod est quia dolor esse
                                 obcaecati omnis, odit facere delectus amet neque accusamus ipsam! Ipsa corporis minima,
-                                nesciunt laudantium beatae sed impedit? Velit.</p>
+                                nesciunt laudantium beatae sed impedit? Velit. [MMCSchool]</p>
                             <div class="projects__bottom">
                                 <ul class="projects__tags">
                                     <li class="projects__tag">HTML</li>
@@ -374,7 +374,7 @@
                                 Iure quo soluta sit inventore, sunt nam facilis voluptates doloribus ab distinctio, quae
                                 voluptas culpa? Ducimus minima dignissimos reprehenderit quod est quia dolor esse
                                 obcaecati omnis, odit facere delectus amet neque accusamus ipsam! Ipsa corporis minima,
-                                nesciunt laudantium beatae sed impedit? Velit.</p>
+                                nesciunt laudantium beatae sed impedit? Velit. [MMCSchool]</p>
                             <div class="projects__bottom">
                                 <ul class="projects__tags">
                                     <li class="projects__tag">HTML</li>
@@ -419,7 +419,7 @@
                                 Iure quo soluta sit inventore, sunt nam facilis voluptates doloribus ab distinctio, quae
                                 voluptas culpa? Ducimus minima dignissimos reprehenderit quod est quia dolor esse
                                 obcaecati omnis, odit facere delectus amet neque accusamus ipsam! Ipsa corporis minima,
-                                nesciunt laudantium beatae sed impedit? Velit.</p>
+                                nesciunt laudantium beatae sed impedit? Velit. [MMCSchool]</p>
                             <div class="projects__bottom">
                                 <ul class="projects__tags">
                                     <li class="projects__tag">HTML</li>
@@ -510,38 +510,54 @@
         <section id="contact" class="contact section-padding">
             <div class="container">
                 <h2 class="section-title">Contact</h2>
-                <div class="contact__box">
-                    <form action="" class="contact__form">
-                        <div class="contact__top">
-                            <div class="contact__field">
-                                <input type="text" class="contact__input" id="name">
-                                <label for="name" class="contact__label">Name:</label>
-                            </div>
-                            <div class="contact__field">
-                                <input type="number" class="contact__input" id="mobile">
-                                <label for="mobile" class="contact__label">Mobile:</label>
-                            </div>
+                <div class="contact__boxes">
+                    <div class="contact__box">
+                        <div class="contact__info">
+                            <p class="contact__text">Have a question? Or maybe you would like to cooperate?</p>
+                            <p class="contact__text">Feel free to contact me via <a href="mailto:cszymon01@gmail.com"
+                                    class="contact__mail">email</a> or by using below form</p>
                         </div>
-                        <div class="contact__middle">
-                            <div class="contact__field">
-                                <input type="email" class="contact__input" id="email">
-                                <label for="email" class="contact__label">E-mail address:</label>
+                    </div>
+                    <div class="contact__box">
+                        <form action="" class="contact__form">
+                            <div class="contact__top">
+                                <div class="contact__field">
+                                    <input type="text" class="contact__input" id="name">
+                                    <label for="name" class="contact__label">Name</label>
+                                    <p class="contact__error">Empty field!</p>
+                                </div>
+                                <div class="contact__field">
+                                    <input type="number" class="contact__input" id="mobile">
+                                    <label for="mobile" class="contact__label">Mobile</label>
+                                    <p class="contact__error">Empty field!</p>
+                                </div>
                             </div>
-                            <div class="contact__field">
-                                <input type="text" class="contact__input" id="subject">
-                                <label for="subject" class="contact__label">Subject:</label>
+                            <div class="contact__middle">
+                                <div class="contact__field">
+                                    <input type="email" class="contact__input" id="email">
+                                    <label for="email" class="contact__label">E-mail address</label>
+                                    <p class="contact__error">Email is not correct!</p>
+                                </div>
+                                <div class="contact__field">
+                                    <input type="text" class="contact__input" id="subject">
+                                    <label for="subject" class="contact__label">Subject</label>
+                                    <p class="contact__error">Empty field!</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contact__bottom">
-                            <div class="contact__field">
-                                <textarea name="" id="textarea" class="contact__textarea"></textarea>
-                                <label for="textarea" class="contact__label">Enter
-                                    message</label>
+                            <div class="contact__bottom">
+                                <div class="contact__field">
+                                    <textarea name="" id="textarea" class="contact__textarea"></textarea>
+                                    <label for="textarea" class="contact__label">Enter
+                                        message</label>
+                                    <p class="contact__error">Empty Field!</p>
+                                </div>
                             </div>
-                        </div>
-                        <button class="contact__btn" type="submit">Send</button>
-                    </form>
+                            <button class="contact__btn">Send</button>
+                        </form>
+                    </div>
                 </div>
+
+
             </div>
         </section>
     </main>
