@@ -8,12 +8,10 @@ const sliderImages = document.querySelectorAll('.freelance__img')
 const sliderWidth = 100
 const sliderSpeed = 3000
 let index = 0
-
 const nameInput = document.querySelector('#name')
 const mobileInput = document.querySelector('#mobile')
 const emailInput = document.querySelector('#email')
 const subjectInput = document.querySelector('#subject')
-const formLabel = document.querySelector('.contact__label')
 const textarea = document.querySelector('#textarea')
 const formBtn = document.querySelector('.contact__btn')
 
@@ -75,7 +73,6 @@ const checkForm = input => {
 			showError(el)
 		} else {
 			clearError(el)
-			// formLabel.classList.add('active-label')
 		}
 	})
 }
