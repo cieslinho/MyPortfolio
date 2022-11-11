@@ -332,6 +332,8 @@ body {
 		justify-content: center;
 	}
 	&__box {
+		display: flex;
+		align-items: center;
 		margin-bottom: 2em;
 		position: relative;
 		min-height: 350px;
@@ -374,6 +376,7 @@ body {
 		flex-direction: column;
 		justify-content: flex-start;
 		height: 100%;
+		width: 100%;
 		z-index: 20;
 		color: var(--text-lightcolor);
 	}

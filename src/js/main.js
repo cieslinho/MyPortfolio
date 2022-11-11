@@ -1,5 +1,6 @@
 const navBtn = document.querySelector('.nav__btn')
 const navMobile = document.querySelector('.nav__mobile')
+const navItems = document.querySelectorAll('.nav__mobile-item')
 const body = document.body
 const sliderBox = document.querySelector('.freelance__slider-box')
 const sliderLeftBtn = document.querySelector('.freelance__btn-left')
@@ -51,6 +52,15 @@ const handleNav = () => {
 	if (navBtn.classList.contains('active-btn')) {
 		navMobile.classList.add('active-menu')
 		body.classList.add('disable-scroll')
+		navItems.forEach(navItem => {
+			if (navMobile.classList.contains('active-menu')) {
+				navItem.addEventListener('click', () => {
+					navMobile.classList.remove('active-menu')
+					navBtn.classList.remove('active-btn')
+					body.classList.remove('disable-scroll')
+				})
+			}
+		})
 	} else {
 		navMobile.classList.remove('active-menu')
 		body.classList.remove('disable-scroll')
@@ -102,6 +112,25 @@ const checkErrors = () => {
 	console.log(errorCount)
 }
 
+const headerAnimation = () => {
+	const headerInfo = document.querySelector('.header__info')
+	const headerGreetings = 'Hi, my name is'
+	const headerTitle = 'Szymon Cieśla'
+	const headerSubTitle = 'Future junior Frontend Developer.'
+	const headerDescription = `"A novice frontend developer who does not give up on resolving new issues
+	and
+	loves to expand in world of web development."`
+	let i = 0
+
+	const intervalId = setInterval(() => {
+		headerInfo.innerHTML += `<p class='header__greetings'>${headerGreetings[i]}</p>`
+		i++
+		if (i === headerGreetings.length) {
+			clearInterval(intervalId)
+		}
+	}, 50)
+}
+
 navBtn.addEventListener('click', handleNav)
 sliderRightBtn.addEventListener('click', handleRightArrow)
 sliderLeftBtn.addEventListener('click', handleLeftArrow)
@@ -111,3 +140,4 @@ formBtn.addEventListener('click', e => {
 	checkEmail(email)
 	checkErrors()
 })
+headerAnimation()
