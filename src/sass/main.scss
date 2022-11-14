@@ -194,7 +194,20 @@ body {
 		font-size: 2rem;
 		color: var(--text-lightcolor);
 	}
-	&__title,
+	&__title {
+		position: relative;
+		color: transparent;
+		-webkit-text-stroke: 1px var(--second-bgcolor);
+		background: url('/dist/img/text-background.png');
+		-webkit-background-clip: text;
+		animation: textanimation 20s linear infinite;
+		@keyframes textanimation {
+			100% {
+				background-position: 1300px 0;
+			}
+		}
+	}
+
 	&__subtitle {
 		color: var(--second-bgcolor);
 	}

@@ -9,6 +9,11 @@ const sliderImages = document.querySelectorAll('.freelance__img')
 const sliderWidth = 100
 const sliderSpeed = 3000
 let index = 0
+const headerBox = document.querySelector('.header__info')
+const headerGreetings = document.querySelector('.header__greetings')
+const headerTitle = document.querySelector('.header__title')
+const headerSubtitle = document.querySelector('.header__subtitle')
+const headerDescription = document.querySelector('.header__description')
 const nameInput = document.querySelector('#name')
 const mobileInput = document.querySelector('#mobile')
 const emailInput = document.querySelector('#email')
@@ -82,6 +87,7 @@ const checkForm = input => {
 		if (el.value === '') {
 			showError(el)
 		} else {
+			el.value = ''
 			clearError(el)
 		}
 	})
@@ -94,7 +100,7 @@ const checkEmail = email => {
 	if (re.test(emailInput.value)) {
 		clearError(email)
 	} else {
-		showError(email, `E-mail is not correct`)
+		showError(email)
 	}
 }
 
@@ -105,39 +111,36 @@ const checkErrors = () => {
 		if (el.classList.contains('error')) {
 			errorCount++
 		}
-		console.log(el)
 	})
-
-	console.log(allInputs)
-	console.log(errorCount)
 }
 
 const headerAnimation = () => {
-	const headerInfo = document.querySelector('.header__info')
-	const headerGreetings = 'Hi, my name is'
-	const headerTitle = 'Szymon Cieśla'
-	const headerSubTitle = 'Future junior Frontend Developer.'
-	const headerDescription = `"A novice frontend developer who does not give up on resolving new issues
-	and
-	loves to expand in world of web development."`
-	let i = 0
-
-	const intervalId = setInterval(() => {
-		headerInfo.innerHTML += `<p class='header__greetings'>${headerGreetings[i]}</p>`
-		i++
-		if (i === headerGreetings.length) {
-			clearInterval(intervalId)
-		}
-	}, 50)
+	let greetings = 'Hi, my name is'
+	let title = 'Szymon Cieśla'
+	let subtitle = 'Future junior Front Developer.'
+	let description = `"A novice frontend developer who does not give up on resolving new issues and loves to expand in world of web development."`
+	let timeout
+	let index = 1
+	let speed = 70
+	const writingAnimation = () => {
+		headerGreetings.innerHTML = greetings.slice(0, index)
+		headerTitle.innerHTML = title.slice(0, index)
+		headerSubtitle.innerHTML = subtitle.slice(0, index)
+		headerDescription.innerHTML = description.slice(0, index)
+		index++
+		if ((index > greetings.length, index > title.length, index > subtitle.length, index > description.length)) return
+		timeout = setTimeout(writingAnimation, speed)
+	}
+	writingAnimation()
 }
 
 navBtn.addEventListener('click', handleNav)
 sliderRightBtn.addEventListener('click', handleRightArrow)
 sliderLeftBtn.addEventListener('click', handleLeftArrow)
+headerAnimation()
 formBtn.addEventListener('click', e => {
 	e.preventDefault()
 	checkForm([nameInput, mobileInput, emailInput, subjectInput, textarea])
-	checkEmail(email)
+	checkEmail(emailInput)
 	checkErrors()
 })
-headerAnimation()
