@@ -117,8 +117,8 @@ const checkErrors = () => {
 const headerAnimation = () => {
 	let greetings = 'Hi, my name is'
 	let title = 'Szymon Cieśla'
-	let subtitle = 'Future junior Front Developer.'
-	let description = `"A novice frontend developer who does not give up on resolving new issues and loves to expand in world of web development."`
+	let subtitle = 'Front-end Developer.'
+	let description = `"A frontend developer who does not give up on resolving new issues and loves to expand in world of web development."`
 	let timeout
 	let index = 1
 	let speed = 70

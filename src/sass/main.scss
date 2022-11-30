@@ -198,7 +198,7 @@ body {
 		position: relative;
 		color: transparent;
 		-webkit-text-stroke: 1px var(--second-bgcolor);
-		background: url('/dist/img/text-background.png');
+		background: url('../img/text-background.png');
 		-webkit-background-clip: text;
 		animation: textanimation 20s linear infinite;
 		@keyframes textanimation {
@@ -1034,13 +1034,8 @@ body {
 		}
 	}
 	.projects {
-		&__boxes {
-			flex-direction: row;
-			// flex-wrap: wrap;
-			align-items: stretch;
-		}
 		&__box {
-			margin: 0 0.65em;
+			margin: 1em;
 			max-width: 450px;
 		}
 		&__content {
