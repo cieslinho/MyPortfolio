@@ -118,7 +118,7 @@ const headerAnimation = () => {
 	let greetings = 'Hi, my name is'
 	let title = 'Szymon Cieśla'
 	let subtitle = 'Front-end Developer.'
-	let description = `"A frontend developer who does not give up on resolving new issues and loves to expand in world of web development."`
+	let description = `"A future junior frontend developer who does not give up on resolving new issues and loves to expand in world of web development."`
 	let timeout
 	let index = 1
 	let speed = 70
