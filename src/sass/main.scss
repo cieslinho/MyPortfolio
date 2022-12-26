@@ -368,7 +368,7 @@ body {
 		border-radius: 5px;
 		overflow: hidden;
 		box-shadow: 0 0 10px var(--nav-bgcolor);
-		transition: box-shadow 0.2s;
+		transition: box-shadow 0.2s, transform 0.3s;
 		&:hover {
 			box-shadow: 0 0 10px var(--cta-btn);
 		}
@@ -1034,11 +1034,21 @@ body {
 		}
 	}
 	.projects {
+		&__boxes {
+			align-items: stretch;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 		&__box {
 			margin: 1em;
-			max-width: 450px;
+			max-width: 280px;
+			&:hover {
+				transform: scale(1.02);
+			}
 		}
 		&__content {
+			justify-content: space-between;
 			padding: 2em 1em;
 		}
 		&__title {
