@@ -139,7 +139,7 @@ sliderRightBtn.addEventListener('click', handleRightArrow)
 sliderLeftBtn.addEventListener('click', handleLeftArrow)
 headerAnimation()
 // formBtn.addEventListener('click', e => {
-// 	e.preventDefault()
+// 	// e.preventDefault()
 // 	checkForm([nameInput, mobileInput, emailInput, subjectInput, textarea])
 // 	checkEmail(emailInput)
 // 	checkErrors()
