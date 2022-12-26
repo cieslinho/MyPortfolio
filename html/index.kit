@@ -400,7 +400,7 @@
                         </div>
                     </div>
                     <div class="contact__box">
-                        <form action="" class="contact__form">
+                        <form method="post" action="email.php" class="contact__form">
                             <div class="contact__top">
                                 <div class="contact__field">
                                     <input type="text" class="contact__input" id="name" required>
@@ -427,13 +427,13 @@
                             </div>
                             <div class="contact__bottom">
                                 <div class="contact__field">
-                                    <textarea name="" id="textarea" class="contact__textarea" required></textarea>
-                                    <label for="textarea" class="contact__label">Enter
+                                    <textarea name="message" id="message" class="contact__textarea" required></textarea>
+                                    <label for="message" class="contact__label">Enter
                                         message</label>
                                     <p class="contact__error">Empty Field!</p>
                                 </div>
                             </div>
-                            <button class="contact__btn">Send</button>
+                            <button class="contact__btn" type="submit">Send</button>
                         </form>
                     </div>
                 </div>
